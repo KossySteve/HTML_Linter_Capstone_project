@@ -3,7 +3,7 @@ module Checks
     error_statement = ''
     file.each_with_index do |element, index|
       arr = element.scan(/<|>/)
-      error_statement << "fix tags at line #{index + 1} " unless (arr.length%2).zero?
+      error_statement << "fix tags at line #{index + 1} " unless (arr.length % 2).zero?
     end
     return error_statement
   end
@@ -12,17 +12,17 @@ module Checks
     error_statement = ''
     file.each_with_index do |element, index|
       arr = element.scan(/"|"/)
-      error_statement << "fix apostrophe \"\" at line #{index + 1} \n " unless arr.length%2 == 0
+      error_statement << "fix apostrophe \"\" at line #{index + 1} \n " unless (arr.length % 2).zero?
     end
     return error_statement
   end
 
   def check_doctype(file)
-      print "add or correct Doctype" unless file.include? "<!DOCTYPE html>"
+    print 'add or correct Doctype' unless file.include? "<!DOCTYPE html>"
   end
 
   def check_lang(file)
-    print "add your language tag" unless file.include?(/<html lang=\"en\">/)
+    print 'add your language tag' unless file.include?(/<html lang=\"en\">/)
   end
 
   def check_alt(file)
