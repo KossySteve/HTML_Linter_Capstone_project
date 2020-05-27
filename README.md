@@ -29,12 +29,13 @@ This is a basic linter for html documents. It can check for syntax errors and st
 
 
 A better code is ;
+
 \<head>
 
-    \<title>Hello World!</title>
+  \<title>Hello World!</title>
   \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
-	\<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	\<link rel="stylesheet" type="text/css" href="stylesheet.css">
+  \<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   \<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	
 \</head>
 
