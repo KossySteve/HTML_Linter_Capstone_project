@@ -12,8 +12,10 @@ This is a basic linter for html documents. It can check for syntax errors and st
 # Examples?
 - Bad code is \<DOCTYPE> and a better code is \<!DOCTYPE html>
 
-- Bad code is \<html></html> and a better code is \<html lang="en"></html>
-  
+- Bad code is \<html>\</html> and a better code is \<html lang="en">\</html>
+
+- Bad code is \<a href="#">\<img src="assets/site_logo.png" ></a> and a better code is \<a href="#">\<img src="assets/site_logo.png" alt ="" ></a>
+
 - Bad code is 	<meta name="viewport content=" width=device-width, initial-scale=1.0"> and a better code is \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
 
 -Bad code is;
