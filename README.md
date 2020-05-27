@@ -14,23 +14,27 @@ This is a basic linter for html documents. It can check for syntax errors and st
 
 - Bad code is \<html></html> and a better code is \<html lang="en"></html>
   
-- Bad code is 	<meta name="viewport content=" width=device-width, initial-scale=1.0"> and a better code is <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+- Bad code is 	<meta name="viewport content=" width=device-width, initial-scale=1.0"> and a better code is \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
 
 -Bad code is \<html></html> and a better code is \<html lang="en"></html>
 \<head>
+
   \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
 	\<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	\<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	
 \</head>
 \<title>Hello World!</title>
 
 
 A better code is ;
 \<head>
+
     \<title>Hello World!</title>
   \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
 	\<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	\<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	
 \</head>
 
 ## Author
