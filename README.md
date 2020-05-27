@@ -10,7 +10,7 @@ This is a basic linter for html documents. It can check for syntax errors and st
 
 ## What is a good or bad code based on this linter?
 # Examples?
-- Bad code is <DOCTYPE> and a better code is <!DOCTYPE html>
+- Bad code is \<DOCTYPE> and a better code is <!DOCTYPE html>
 
 - Bad code is <html></html> and a better code is <html lang="en"></html>
   
