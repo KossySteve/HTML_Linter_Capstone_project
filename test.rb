@@ -17,4 +17,8 @@ def check_apostrophe(file)
   end
   return error_statement
 end
-print check_apostrophe([]).class == String
+#print check_apostrophe([]).class == String
+def check_doctype(file)
+  'add or correct Doctype' unless file.include? '<!DOCTYPE html>'
+end
+puts check_doctype([]).class == String
