@@ -46,7 +46,6 @@ module Checks
 
     structure = ['<html lang=\"en\">', '</html>', '<head>', '</head>', '<body>', '</body>']
     file_string = file.gsub(/\n|\t/, '')
-
     structure.any? { |tag|  error_statement << "poor structure check your #{tag} tag" unless file_string.match(tag) }
 
     error_statement
@@ -65,7 +64,7 @@ module Checks
 
   def check_head_tag_contents(file)
     error_statement = ''
-    head_contents = ["<title>","<meta", "<link","<style>"]
+    head_contents = ['<title>','<meta', '<link','<style>']
     file_str = file.gsub(/\n|\t/, "")
     upper_limit = file_str =~ (/<head>/)
     lower_limit = file_str =~ (/<\/head>/)

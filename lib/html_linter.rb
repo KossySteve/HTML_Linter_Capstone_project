@@ -16,7 +16,7 @@ class Linter
     puts check_alt(@file)
     puts check_doctype(@file)
     puts check_lang(@file)
-    puts ""
+    puts ''
     puts check_structure(@file_content)
     puts check_semantics(@file_content)
     puts check_head_tag_contents(@file_content)
