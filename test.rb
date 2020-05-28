@@ -1,29 +1,23 @@
-def check_tags(file)
+def check_head_tag_contents(file)
   error_statement = ''
-  file.each_with_index do |element, index|
-    arr = element.scan(/<|>/)
-    error_statement << "fix tags at line #{index + 1} " unless (arr.length % 2).zero?
+  head_contents = ["<title>","<meta", "<link","<style>"]
+  file_str = file.gsub(/\n|\t/, "")
+  upper_limit = file_str =~ (/<head>/)
+  lower_limit = file_str =~ (/<\/head>/)
+
+  head_contents.each do |tag|
+    if file_str.include?(tag)
+      unless (upper_limit..lower_limit).include? (file_str.index(tag))
+         error_statement << "place #{tag} in between <head></head>"
+      end
+    end
   end
-  return error_statement
-end
 
-#puts check_tags(["<titlemint.com/sign_up</title>"]) == "fix tags at line #{0 + 1} "
-
-def check_lang(file)
-  'add your language tag' unless file.include?(/<html lang=\"en\">/)
+  error_statement
 end
-
-def check_apostrophe(file)
-  error_statement = ''
-  file.each_with_index do |element, index|
-    arr = element.scan(/"|"/)
-    error_statement << "fix apostrophe \"\" at line #{index + 1} \n " unless (arr.length % 2).zero?
-  end
-  return error_statement
-end
-#puts check_apostrophe(["<a href=\"google.com>I forgot my User ID or Password</a>"]) == "fix apostrophe \"\" at line #{0 + 1} \n "
+puts check_head_tag_contents(File.read("index.html"))
 
 def check_doctype(file)
   'add or correct Doctype' unless file.include? '<!DOCTYPE html>'
 end
-puts check_doctype([]) == 'add or correct Doctype'
+#puts check_doctype([]) == 'add or correct Doctype'
