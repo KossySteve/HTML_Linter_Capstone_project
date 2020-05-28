@@ -42,37 +42,42 @@ module Checks
   end
 
   def check_structure(file)
+    error_statement = ''
+
     structure = ['<html lang=\"en\">', '</html>', '<head>', '</head>', '<body>', '</body>']
     file_string = file.gsub(/\n|\t/, '')
 
-    structure.any? { |tag| print "poor structure check your #{tag} tag" unless file_string.match(tag) }
+    structure.any? { |tag|  error_statement << "poor structure check your #{tag} tag" unless file_string.match(tag) }
 
-    "\n"
+    error_statement
   end
 
   def check_semantics(file)
+    error_statement = ''
+
     semantics = ['<header>', '</header>', '<main>', '</main>', '<footer>', '</footer>']
     file_string = file.gsub(/\n|\t/, '')
 
-    semantics.any? { |tag| print 'poor semantics ' unless file_string.match(tag) }
+    semantics.any? { |tag| error_statement << 'poor semantics' unless file_string.match(tag) }
 
-    "\n"
+    error_statement
   end
 
   def check_head_tag_contents(file)
+    error_statement = ''
     head_contents = ["<title>","<meta", "<link","<style>"]
     file_str = file.gsub(/\n|\t/, "")
     upper_limit = file_str =~ (/<head>/)
     lower_limit = file_str =~ (/<\/head>/)
-    
+
     head_contents.each do |tag|
       if file_str.include?(tag)
         unless (upper_limit..lower_limit).include? (file_str.index(tag))
-           print "place #{tag} in between <head></head> "
+           error_statement << "place #{tag} in between <head></head>"
         end
       end
     end
 
-    "\n"
+    error_statement
   end
 end

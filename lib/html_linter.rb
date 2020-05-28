@@ -1,5 +1,5 @@
 require './lib/error_checks.rb'
-# require './lib/main.rb'
+
 class Linter
   include Checks
 
@@ -16,6 +16,7 @@ class Linter
     puts check_alt(@file)
     puts check_doctype(@file)
     puts check_lang(@file)
+    puts ""
     puts check_structure(@file_content)
     puts check_semantics(@file_content)
     puts check_head_tag_contents(@file_content)

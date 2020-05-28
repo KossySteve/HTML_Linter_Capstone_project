@@ -7,7 +7,11 @@ def check_tags(file)
   return error_statement
 end
 
-#print check_tags([]).class == String
+#puts check_tags(["<titlemint.com/sign_up</title>"]) == "fix tags at line #{0 + 1} "
+
+def check_lang(file)
+  'add your language tag' unless file.include?(/<html lang=\"en\">/)
+end
 
 def check_apostrophe(file)
   error_statement = ''
@@ -17,8 +21,9 @@ def check_apostrophe(file)
   end
   return error_statement
 end
-#print check_apostrophe([]).class == String
+#puts check_apostrophe(["<a href=\"google.com>I forgot my User ID or Password</a>"]) == "fix apostrophe \"\" at line #{0 + 1} \n "
+
 def check_doctype(file)
   'add or correct Doctype' unless file.include? '<!DOCTYPE html>'
 end
-puts check_doctype([]).class == String
+puts check_doctype([]) == 'add or correct Doctype'
