@@ -1,13 +1,11 @@
 require './lib/error_checks.rb'
-#require './bin/main.rb'
-
+# require './lib/main.rb'
 class Linter
   include Checks
 
-  attr_reader :file, :file_content
+  attr_accessor :file, :file_content
 
   def initialize(filename)
-    File.open(filename, "r")
     @file_content = File.read(filename)
     @file = File.read(filename).split(/\n/)
   end
@@ -23,4 +21,5 @@ class Linter
     puts check_head_tag_contents(@file_content)
   end
 end
-Linter.new("index.html").run_all_checks
+
+Linter.new('index.html').run_all_checks
