@@ -66,7 +66,7 @@ module Checks
     head_contents = ['<title>', '<meta', '<link', '<style>']
     file_str = file.gsub(/\n|\t/, '')
     upper_limit = file_str =~ %r{<head>}
-    lower_limit = file_str =~ %r{<head>}
+    lower_limit = file_str =~ %r{</head>}
 
     head_contents.each do |tag|
       if file_str.include?(tag)
