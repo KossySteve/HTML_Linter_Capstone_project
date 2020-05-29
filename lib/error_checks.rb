@@ -65,15 +65,12 @@ module Checks
     error_statement = ''
     head_contents = ['<title>', '<meta', '<link', '<style>']
     file_str = file.gsub(/\n|\t/, '')
-    upper_limit = file_str =~ %r{<head>}
-    lower_limit = file_str =~ %r{</head>}
+    upper_limit = file_str =~ /<head>/
+    lower_limit = file_str =~ /<\/head>/
 
     head_contents.each do |tag|
       if file_str.include?(tag)
-        unless (upper_limit..lower_limit).include? file_str.index(tag)
-          error_statement << "place #{tag} in between <head></head>"
-        end
-        next
+        error_statement << "place #{tag} in between <head></head>" unless (upper_limit..lower_limit).include? file_str.index(tag)
       end
     end
 
