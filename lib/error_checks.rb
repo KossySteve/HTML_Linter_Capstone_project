@@ -46,9 +46,7 @@ module Checks
 
     structure = ['<html lang=\"en\">', '</html>', '<head>', '</head>', '<body>', '</body>']
     file_string = file.gsub(/\n|\t/, '')
-
-    structure.any? { |tag|  error_statement << "poor structure check your #{tag} tag" unless file_string.match(tag) }
-    
+    structure.any? { |tag| error_statement << "poor structure check your #{tag} tag" unless file_string.match(tag) }
     error_statement
   end
 
