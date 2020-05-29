@@ -21,11 +21,13 @@ This is a basic linter for html documents. It can check for syntax errors and st
 
 and a better code \<a href="#">\<img src="assets/logo.png" alt ="logo"></a>
 
+
 - Bad code is 	
 
 <meta name="viewport content=" width=device-width, initial-scale=1.0">                                                                
 								                                                                       better code is                                                                                                                          
 								                                                                        \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
+
 
 -Bad code is;
 
