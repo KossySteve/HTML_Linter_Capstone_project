@@ -46,7 +46,9 @@ module Checks
 
     structure = ['<html lang=\"en\">', '</html>', '<head>', '</head>', '<body>', '</body>']
     file_string = file.gsub(/\n|\t/, '')
+
     structure.any? { |tag|  error_statement << "poor structure check your #{tag} tag" unless file_string.match(tag) }
+    
     error_statement
   end
 
@@ -73,7 +75,7 @@ module Checks
         unless (upper_limit..lower_limit).include? file_str.index(tag)
           error_statement << "place #{tag} in between <head></head>"
         end
-        break
+        next
       end
     end
 

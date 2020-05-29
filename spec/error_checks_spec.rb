@@ -39,7 +39,7 @@ RSpec.describe Checks do
   end
   describe '#check_head_tag_contents(file)' do
     it 'returns error statement' do
-      expect(check_head_tag_contents(File.read('index.html'))).to eql("place <title> in between <head></head>")
+      expect(check_head_tag_contents(File.read('index.html'))).to eql('place <title> in between <head></head>')
     end
   end
 end
