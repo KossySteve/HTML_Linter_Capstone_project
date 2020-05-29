@@ -14,7 +14,7 @@ RSpec.describe Checks do
   end
   describe '#check_doctype(file)' do
     it 'returns error statement' do
-      expect(check_doctype([])).to eql('add or correct Doctype')
+      expect(check_doctype([])).to eql('add or correct Doctype as <!DOCTYPE html>')
     end
   end
   describe '#check_lang(file)' do

@@ -7,7 +7,16 @@ This is a basic linter for html documents. It can check for syntax errors and st
 
 ## How to run linter?
 - You can run ./lib/html_linter.rb file on your terminal.
-- If you want to use another html document you can write the file path in the object of Linter claas.
+- If you want to use another html document you can write the file path in the object of Linter class.
+
+## The kind of errors this linter detects?
+The linter can detect the following errors in the code;
+- an open tag on particular line of the html document.
+- an open apostrophe (") in the code syntax.
+- a missing alt="" in the <img/> element in the code syntax.
+- missing tags like <!DOCTYPE html> and <html lang="en">
+- missing good semantic tags like <html lang="en"></html>, <head></head>,<body></body>
+- misplacement of element <link> and <meta> tags outside of the <head></head> tags.
 
 ## What is a good or bad code based on this linter?
 # Examples?
@@ -15,44 +24,40 @@ This is a basic linter for html documents. It can check for syntax errors and st
 
 - Bad code is \<html>\</html> and a better code is \<html lang="en">\</html>
 
-- Bad code is 
+- Bad code is                                                         Good code                                         
 
-\<a href="#">\<img src="assets/logo.png" ></a> 
-
-and a better code \<a href="#">\<img src="assets/logo.png" alt ="logo"></a>
+\<a href="#">\<img src="assets/logo.png" ></a>        vs        \<a href="#">\<img src="assets/logo.png" alt ="logo"></a>
 
 
-- Bad code is 	
 
-<meta name="viewport content=" width=device-width, initial-scale=1.0">                                                                
-								                                                                       better code is                                                                                                                          
-								                                                                        \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
+\<meta http-equiv="X-UA-Compatible content="IE=edge">           \<meta http-equiv="X-UA-Compatible" content="IE=edge">
+>
 
 
--Bad code is;
+-Bad code for head tags is;
 
 \<head>
 
   \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
-  
-  \<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  
+
+  \<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   \<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	
+
 \</head>
 \<title>Hello World!</title>
 
 
-A better code is ;
+Good code for head tags elements is ;
 
 \<head>
 
   \<title>Hello World!</title>
-  
+
   \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
-  
+
   \<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	
+
 \</head>
 
 ## Author

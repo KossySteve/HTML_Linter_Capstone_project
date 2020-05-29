@@ -22,7 +22,7 @@ module Checks
   end
 
   def check_doctype(file)
-    'add or correct Doctype' unless file.include? '<!DOCTYPE html>'
+    'add or correct Doctype as <!DOCTYPE html>' unless file.include? '<!DOCTYPE html>'
   end
 
   def check_lang(file)
