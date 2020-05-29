@@ -29,17 +29,17 @@ RSpec.describe Checks do
   end
   describe '#check_structure(file)' do
     it 'returns error statement' do
-      expect(check_structure(File.read("index.html"))).to eql("poor structure check your #{'<html lang=\"en\">'} tag")
+      expect(check_structure(File.read('index.html'))).to eql('poor structure check your <html lang=\"en\"> tag')
     end
   end
   describe '#check_semantics(file)' do
     it 'returns error statement' do
-      expect(check_semantics("<img src=\"assets/logo.png\">")).to eql('poor semantics')
+      expect(check_semantics('<img src=\"assets/logo.png\">')).to eql('poor semantics')
     end
   end
   describe '#check_head_tag_contents(file)' do
     it 'returns error statement' do
-      expect(check_head_tag_contents(File.read("index.html"))).to eql("place #{"<title>"} in between <head></head>")
+      expect(check_head_tag_contents(File.read('index.html'))).to eql("place <title> in between <head></head>")
     end
   end
 end
