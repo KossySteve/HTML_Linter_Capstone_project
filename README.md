@@ -13,10 +13,10 @@ This is a basic linter for html documents. It can check for syntax errors and st
 The linter can detect the following errors in the code;
 - an open tag on particular line of the html document.
 - an open apostrophe (") in the code syntax.
-- a missing alt="" in the <img/> element in the code syntax.
-- missing tags like <!DOCTYPE html> and <html lang="en">
-- missing good semantic tags like <html lang="en"></html>, <head></head>,<body></body>
-- misplacement of element <link> and <meta> tags outside of the <head></head> tags.
+- a missing alt="" in the \<img/> element in the code syntax.
+- missing tags like \<!DOCTYPE html> and \<html lang="en">
+- missing good semantic tags like \<html lang="en">\</html>, \<head>\</head>,\<body>\</body>
+- misplacement of element \<link> and \<meta> tags outside of the <head></head> tags.
 
 ## What is a good or bad code based on this linter?
 # Examples?
