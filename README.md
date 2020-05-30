@@ -4,9 +4,10 @@ This is a basic linter for html documents. It can check for syntax errors and st
 ## Built With
 
 - Ruby
+- Rspec
 
 ## How to run linter?
-- You can run ./lib/html_linter.rb file on your terminal.
+- You can run ruby ./bin/html_linter.rb file on your terminal.
 - If you want to use another html document you can write the file path in the object of Linter class.
 
 ## The kind of errors this linter detects?
