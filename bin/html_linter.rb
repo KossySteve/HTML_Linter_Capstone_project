@@ -1,4 +1,4 @@
-require_relative './lib/error_checks.rb'
+require_relative '../lib/error_checks.rb'
 
 class Linter
   include Checks
