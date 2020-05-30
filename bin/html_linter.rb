@@ -3,7 +3,7 @@ require_relative '../lib/error_checks.rb'
 class Linter
   include Checks
 
-  attr_accessor :file, :file_content
+  attr_reader :file, :file_content
 
   def initialize(filename)
     @file_content = File.read(filename)
