@@ -19,47 +19,6 @@ The linter can detect the following errors in the code;
 - missing good semantic tags like \<html lang="en">\</html>, \<head>\</head>,\<body>\</body>
 - misplacement of element \<link> and \<meta> tags outside of the <head></head> tags.
 
-## What is a good or bad code based on this linter?
-# Examples?
-- Bad code is \<DOCTYPE> and a better code is \<!DOCTYPE html>
-
-- Bad code is \<html>\</html> and a better code is \<html lang="en">\</html>
-
-- Bad code is                                                         Good code                                         
-
-\<a href="#">\<img src="assets/logo.png" ></a>        vs        \<a href="#">\<img src="assets/logo.png" alt ="logo"></a>
-
-
-
-\<meta http-equiv="X-UA-Compatible content="IE=edge">           \<meta http-equiv="X-UA-Compatible" content="IE=edge">
->
-
-
--Bad code for head tags is;
-
-\<head>
-
-  \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
-
-  \<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  \<link rel="stylesheet" type="text/css" href="stylesheet.css">
-
-\</head>
-\<title>Hello World!</title>
-
-
-Good code for head tags elements is ;
-
-\<head>
-
-  \<title>Hello World!</title>
-
-  \<meta name="viewport" content=" width=device-width, initial-scale=1.0">
-
-  \<link rel="stylesheet" type="text/css" href="stylesheet.css">
-
-\</head>
 
 ## Author
 
