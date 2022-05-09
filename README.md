@@ -6,20 +6,6 @@ This is a basic linter for html documents. It can check for syntax errors and st
 - Ruby
 - Rspec
 
-## How to run linter?
-# On replit
-step 1: Click the link in step 4 below
-
-step 2: You may use the code in index.html or open index.html file,then copy and paste your own code into index.html
-
-step 3: Click run button and check console for errors if any
-
-step 4: CLICK HERE !!! (https://replit.com/@kossySteve/HTMLLinterCapstoneproject#) 
-
-#In terminal
-- You can run ruby ./bin/html_linter.rb file on your terminal.
-- If you want to use another html document you can add the file and write the file path in the object of Linter class.
-
 ## The kind of errors this linter detects?
 The linter can detect the following errors in the code;
 - an open tag on particular line of the html document.
@@ -29,6 +15,22 @@ The linter can detect the following errors in the code;
 - missing good semantic tags like \<html lang="en">\</html>, \<head>\</head>,\<body>\</body>
 - misplacement of element \<link> and \<meta> tags outside of the <head></head> tags.
 
+## How to run linter?
+# On replit
+step 1: Click the link in step 4 below
+
+step 2: You may use the code in index.html or open index.html file,then copy and paste your own code into index.html
+
+step 3: Click run button and check console for errors if any
+
+step 4: You may edit the index.html file to cause simple syntax errors and see how the application detects them
+
+step 5: CLICK HERE !!! (https://replit.com/@kossySteve/HTMLLinterCapstoneproject#) 
+
+#In terminal
+- You can run ruby ./bin/html_linter.rb file on your terminal.
+- If you want to use another html document you can add the file and write the file path in the object of Linter class.
+
 
 ## Author
 
@@ -37,7 +39,7 @@ The linter can detect the following errors in the code;
 - E-mail: [kossyeze@gmail.com]
 - Github: [@KossySteve](https://github.com/KossySteve)
 - Twitter: [@EzeSteve3](https://twitter.com/EzeSteve3/)
-- Linkedin: [linkedin](https://www.linkedin.com/in/steve-ez-b090ba198/)
+- Linkedin: [Kossy Steve](https://www.linkedin.com/in/kossy-steve/)
 
 
 ## 🤝 Contributing
