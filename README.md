@@ -7,8 +7,15 @@ This is a basic linter for html documents. It can check for syntax errors and st
 - Rspec
 
 ## How to run linter?
+# On replit
+step 1: Click the link in step 4 below
+step 2: You may use the code in index.html or open index.html file,then copy and paste your own code into index.html
+step 3: Click run button and check console for errors if any
+step 4: CLICK HERE !!! (https://replit.com/@kossySteve/HTMLLinterCapstoneproject#) 
+
+#In terminal
 - You can run ruby ./bin/html_linter.rb file on your terminal.
-- If you want to use another html document you can write the file path in the object of Linter class.
+- If you want to use another html document you can add the file and write the file path in the object of Linter class.
 
 ## The kind of errors this linter detects?
 The linter can detect the following errors in the code;
