@@ -9,8 +9,11 @@ This is a basic linter for html documents. It can check for syntax errors and st
 ## How to run linter?
 # On replit
 step 1: Click the link in step 4 below
+
 step 2: You may use the code in index.html or open index.html file,then copy and paste your own code into index.html
+
 step 3: Click run button and check console for errors if any
+
 step 4: CLICK HERE !!! (https://replit.com/@kossySteve/HTMLLinterCapstoneproject#) 
 
 #In terminal
